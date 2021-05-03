@@ -18,24 +18,25 @@
             <br>
             <br>
            <?php
-               if(isset($_POST['submit']));{
+               if(isset($_POST['submit'])){
                    $p = $_POST['principal'];
                    $i = $_POST['interest'];
                    $pay = $_POST['payment'];
-                   $i = $p * $i;
-                   $a = ($p + $i) - $pay;
+                   $interest = $p * $i;
+                   $principle = ($p + $i) - $pay;
 
-                   printf($a);
-                   // for($year=1;$year <=7;$year++)
-                   // {
-                   //     echo "year ". '\t' . "principal" . '\t' . "interest" . '\t' . "payment" .'\n';
-                   //     echo "$year". '\t' . "$p". '\t' . "$i". '\t' . "$pay";
-                   // }
-                   
+                   for($year=0;$year <=7;$year++)
+                   {
+                       echo "year ". '\t' . "principal" . '\t' . "interest" . '\t' . "payment" .'\n';
+                       printf( "$year". '\t' . "$principle". '\t' . "$interest". '\t' . "$pay");
+                   }
+
+
+
                }
           ?>
 
         </form>
-        
+
     </body>
 </html>
